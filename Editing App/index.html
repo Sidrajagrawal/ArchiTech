@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG Floor Plan Editor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <div class="header">
+      <h1>SVG Floor Plan Editor</h1>
+      <div class="header-actions">
+        <button id="new-file">New</button>
+        <button id="help-button">Help</button>
+        <button id="creat-wall-button" onclick="createWall()">Create Wall</button>
+      </div>
+    </div>
+    
+    <div id="svg-editor-container" class="svg-editor-container"></div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize the SVG Editor
+      const editor = initSVGEditor();
+      
+      // Add event listeners for header buttons
+      document.getElementById('new-file').addEventListener('click', () => {
+        if (confirm('Create a new file? Any unsaved changes will be lost.')) {
+          // Create a new blank SVG
+          const blankSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+          blankSvg.setAttribute('width', '800');
+          blankSvg.setAttribute('height', '600');
+          blankSvg.setAttribute('viewBox', '0 0 800 600');
+          
+          // Add the SVG to the workspace
+          const workspace = document.getElementById('svg-workspace');
+          workspace.innerHTML = '';
+          workspace.appendChild(blankSvg);
+          
+          // Set as current SVG
+          editor.svgContainer = blankSvg;
+          editor.addElementListeners(blankSvg);
+        }
+      });
+      
+      document.getElementById('help-button').addEventListener('click', () => {
+        alert(`SVG Floor Plan Editor Help:
+        
+1. Load an SVG file using the "Load SVG" button
+2. Click "Ungroup All" to break down grouped elements
+3. Click on any element to select it
+4. Edit properties in the right panel
+5. Use Zoom buttons to adjust the view
+6. Save your work with the "Save SVG" button
+        
+Keyboard shortcuts:
+- Delete: Remove selected element
+- Ctrl+Z: Undo (coming soon)
+        `);
+      });
+    });
+  </script>
+</body>
+</html>

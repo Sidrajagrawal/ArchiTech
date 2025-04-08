@@ -1,0 +1,146 @@
+.NewFormMain{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.9s ease-in-out;
+}
+.blacktined{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.75rem;
+    background-color: rgba(17, 24, 39, 0.7); 
+    color: rgba(243, 244, 246, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-container{
+    width: 50%;
+    height: 75%;
+    border-radius: 0.75rem;
+    background-color: rgba(148, 148, 148, 0.6);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px solid black;
+    padding: 2rem;
+    color: rgba(243, 244, 246, 1);
+}
+.form-container1 {
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid black; */
+    display: flex;
+    
+}
+.form-container>.Dim1{
+    margin-left:200px;
+    padding: 15px;
+    border:none;
+    background-color: rgba(30, 30, 30, 0.6);
+    color:white;
+    transition: all 0.3s ease-in-out;
+}
+.form-container>.Dim2{
+    margin-left:100px;
+    padding: 15px;
+    border:none;
+    color:white;
+    background-color: rgba(30, 30, 30, 0.6);
+    transition: all 0.3s ease-in-out;
+}
+.form-container>.Dim2:hover{
+    transform: scale(1.1);
+    color: rgb(199, 197, 68);
+}
+.form-container>.Dim1:hover{
+    transform: scale(1.1);
+    color: rgb(199, 197, 68);
+}
+
+.Strip-container{
+    width: 10%;
+    height: 100%;
+    border-radius: 0.75rem;
+    background-color:black;
+    color: rgba(243, 244, 246, 1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.Strip-container i {
+    margin: 10px 0;
+}
+.Button-container1{
+    width: 100%;
+    height: 100%;
+}
+.Button-container1>.Btton-inside-1{
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 20px;
+}
+.Button-container1>.Btton-inside-2{
+    text-align: center;
+}
+.Button-container1>.Btton-inside-1>button{
+    width: 30%;
+    height: 20%;
+    font-size: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px solid black;
+    border-radius: 9px;
+    border: none;
+    background-color: rgba(201, 169, 12, 0.6);
+    padding: 2rem;
+    color: rgba(243, 244, 246, 1);
+    margin-left: 20px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.Button-container1>.Btton-inside-2>button{
+    width: 30%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px solid black;
+    height: 20%;
+    font-size: 30px;
+    border-radius: 9px;
+    border: none;
+    background-color: rgba(30, 30, 30, 0.6);
+    padding: 2rem;
+    color: rgba(243, 244, 246, 1);
+    margin-left: 20px; 
+    transition: all 0.3s ease-in-out;
+}
+.Button-container1>.Btton-inside-1>button:hover{
+    transform: scale(1.1);
+}
+.Button-container1>.Btton-inside-2>button:hover{
+    transform: scale(1.1);
+}
+.input-cell>input{
+    background-color: transparent;
+    color:white;
+    border: none;
+    border-bottom: 2px solid black;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    margin-left: 50px;
+}
+.input-cell>input:focus{
+    outline: none;
+    border-bottom: 2px solid white;
+}
+.submit-button{
+    width: 100%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 24px;
+    border-radius: 9px;
+    border: none;
+    background-color: #55BF4C;
+}

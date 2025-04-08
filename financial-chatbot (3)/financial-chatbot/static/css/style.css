@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* ---------------------NavBar--------------------- */
+.nav{
+    width: 100%;
+    height: 12%;
+    border: 1px solid black;
+    display: flex;
+}
+.nav>.left{
+    width: 65%;
+    height: 100%;
+    display: flex;
+}
+.nav>.left>.logo img{
+    margin-right: 30px;
+    margin-left:40px;
+    margin-top:32px;
+}
+.nav>.left>.item{
+    width: 50%;
+    height: 100%;
+}
+.nav>.left>.item>ul{
+    display: flex;
+    list-style: none;
+    margin-top: 26px;
+}
+.nav>.left>.item>ul>li{
+    margin-right: 10px;
+    font-size:16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 550;
+    padding: 5px 5px;
+    cursor: pointer;
+    transition: 0.7s ease-in-out;
+}
+.nav>.left>.item>ul>li:hover{
+    border-bottom: 1px solid black;
+}
+.nav>.right{
+    width: 35%;
+    height: 100%;
+}
+.nav>.right>.item{
+    width: 100%;
+    height: 100%;
+}
+.nav>.right>.item>button{
+    border: none;
+    margin-left:50px;
+    margin-top:22px;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size:16px;
+    border-radius:2px;
+    font-weight:550;
+}
+.btn-1{
+    background-color: #008254;
+    color:white;
+}
+.btn-1:hover{
+    background-color: #006642;
+}
+.btn-2{
+    background-color: #dadada;
+    color:#006642;
+}
+.btn-2:hover{
+    background-color: #b3b3b3;
+}
+
+/* ----------------Conatiner-1---------------------- */
+
+.conatainer-1{
+    width: 100%;
+    height: 100%;
+    background-color: #006642;
+    padding-top: 40px;
+    overflow: hidden; 
+}
+.conatainer-1>.light-head{
+    overflow:visible;
+    background-color:#008254;
+    border-radius: 50px;
+    width: 70%;
+    height: 40px;
+    margin-left: 200px;
+    color: #B7ECDA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+
+}
+.conatainer-1>.light-head>img{
+    margin-bottom: 26px;
+}
+.conatainer-1>.main-head{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    margin-left: 200px;
+    margin-top: 60px;
+    letter-spacing: 1px;
+}
+.conatainer-1>.sub-head{
+    color: rgb(231, 231, 231);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    margin-left: 200px;
+    margin-top: 40px;
+    letter-spacing: 1px;
+}
+.conatainer-1>.banner{
+    width:  70%;
+    height: 60%;
+    background-color: white;
+    margin-left: 200px;
+    margin-top: 50px;
+    overflow: hidden;
+    
+}
+.conatainer-1>.banner>.card{
+    width: 100%;
+    height: 100%;
+}
+.conatainer-1>.banner>.card>.menu{
+    width: 100%;
+    height: 10%;
+}
+.conatainer-1>.banner>.card>.menu>ul{
+    list-style: none;
+    display: flex;
+}
+.conatainer-1>.banner>.card>.menu>ul>li{
+    font-size: 15px;
+    border-radius: 50px;
+    font-weight: 550;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    padding: 10px;
+    color:#006642;
+}
+.banner {
+    background-color: #f4f4f4; 
+    padding: 10px;
+    position: relative;
+    border-bottom-left-radius: 20px; 
+    border-bottom-right-radius: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    border-bottom-left-radius: 20px; 
+    border-bottom-right-radius: 20px;
+    background-color: #3d9d7b; 
+    z-index: 1; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.menu-item {
+    padding: 10px 20px;
+    color: white; 
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+.menu-item:hover {
+    color:black;
+}
+.banner>.content{
+    width: 100%;
+    display: flex;
+}
+.banner>.content>.left{
+    width: 50%;
+    font-size: 30px;
+    color: #006642;
+    font-weight: 550;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 60px;
+    padding-left: 60px;
+}
+.banner>.content>.left>button{
+    border: none;
+    margin-top: 50px;
+    cursor: pointer;
+    padding: 15px 20px;
+    font-size:16px;
+    border-radius:2px;
+    font-weight:550;
+    background-color: #008254;
+    color:white;
+}
+.banner>.content>.left>button:hover{
+    background-color: #006642;
+}
+
+/* -------------------Container-2---------------------- */
+
+.container-2{
+    background-color: #004D38;
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#AEC0C2", endColorstr="#6087C2", GradientType=1);
+}
+.grid {
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: top;
+    animation: gridMove 25s infinite ease-in-out;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes gridMove {
+    0% {
+        background-position: top center;
+    }
+
+    50% {
+        background-position: bottom center;
+    }
+
+    100% {
+        background-position: top center;
+    }
+}
+.container-2>.grid>.left{
+    width: 38%;
+    height: 60%;
+    margin-right: 50px;
+    background-color: #E8FDAC; 
+    box-shadow: 25px -20px 1px #22946B;   
+    border-radius: 10px;
+}
+.container-2>.grid>.left>.head{
+    font-size: 24px;
+    font-weight: 550;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 40px;
+    padding-left: 40px;
+    color:#004D38;
+}
+.container-2>.grid>.left>.discription{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+    padding-left: 40px;
+    padding-top: 20px;
+    font-weight:lighter;
+}
+.container-2>.grid>.left button{
+    border: none;
+    margin-top: 25px;
+    cursor: pointer;
+    padding: 15px 20px;
+    font-size:16px;
+    border-radius:2px;
+    font-weight:550;
+    background-color: #008254;
+    color:white;
+    margin-left: 40px;
+}
+.container-2>.grid>.left button:hover{
+    background-color: #006642;
+}
+.container-2>.grid>.left>.note{
+    font-size: 13px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+    padding-left: 40px;
+    padding-top: 10px;
+    font-weight:lighter;
+}
+.footer{
+    width: 100%;
+    height: 50%;
+    background-color: #FFF7EA;
+}
