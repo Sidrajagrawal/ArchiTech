@@ -79,21 +79,17 @@ def chat():
     user_message = data.get('message', '')
     conversation_history = data.get('history', [])
     
-    # First-level check - if clearly not architecture-related, respond immediately
     if not is_architecture_related(user_message) and len(user_message.split()) > 3:
         non_architecture_response = "I can only answer questions about building design and construction. Please ask about building materials, floor plans, costs, or similar topics."
         return jsonify({"response": non_architecture_response})
     
-    # Prepare messages for the API
     messages = [
         {"role": "system", "content": SYSTEM_PROMPT}
     ]
     
-    # Add conversation history
     for msg in conversation_history:
         messages.append({"role": msg["role"], "content": msg["content"]})
     
-    # Add the new user message
     messages.append({"role": "user", "content": user_message})
     
     try:

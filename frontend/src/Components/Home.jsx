@@ -24,7 +24,7 @@ const Home = () => {
                 </div>
                 <div className="right">
                     <button className="btn-contact" onClick={() => window.open('https://www.instagram.com/gupta_saksham_55/','_blank')}>Get in touch</button>
-                    <button className="btn-start" onClick={() => navigate('/create')}>Start Creating Now</button> 
+                    <button className="btn-start" onClick={() => navigate('')}>Start Creating Now</button> 
                 </div>
             </div>
             <div className="main">

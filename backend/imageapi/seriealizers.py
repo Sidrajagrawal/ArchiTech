@@ -8,16 +8,12 @@ class FloorPlanSerializer(serializers.ModelSerializer):
         extra_kwargs = {
             'house_type': {'required': True},
             'total_land_dimension': {'required': True},
+            'guest_room_dimension': {'required': False},
+            'bedroom_dimension': {'required': False},
+            'living_room_dimension': {'required': False},
+            'garage_dimension': {'required': False},
+            'kitchen_dimension': {'required': False},
+            'balcony_dimension': {'required': False},
+            'dining_room_dimension': {'required': False},
+            'foyer_dimension': {'required': False},
         }
-
-    def validate(self, data):
-        """Custom validation to ensure at least one room dimension is provided."""
-        if not any(
-            data.get(field) for field in [
-                'guest_room_dimension', 'bedroom_dimension', 'living_room_dimension',
-                'garage_dimension', 'Bathroom_dimension', 'kitchen_dimension',
-                'balcony_dimension', 'dining_room_dimension', 'foyer_dimension'
-            ]
-        ):
-            raise serializers.ValidationError("At least one room dimension must be provided.")
-        return data

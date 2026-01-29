@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import Back from '../image/Back.jpg';
 import './CreatePage.css';
 
 const CreatePage = () => {
-
-
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     house_type: '',
@@ -25,24 +25,20 @@ const CreatePage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
-    const newTab = window.open("", "_blank");  // ✅ Open a blank tab first
-  
+
     try {
       const response = await axios.post(
         'http://localhost:8000/generate-house-map/',
         formData,
         { headers: { 'Content-Type': 'application/json' } }
       );
-  
-      if (response.data.image_url) {
-        newTab.location.href = response.data.image_url;  // ✅ Redirect after receiving response
+
+      if (response.data.image_base64) {
+        navigate('/result', { state: { imageBase64: response.data.image_base64 } });
       } else {
-        newTab.close();  // ❌ Close the tab if no image is found
-        alert("Failed to retrieve image URL");
+        alert("Failed to retrieve image");
       }
     } catch (error) {
-      newTab.close();  // ❌ Close the tab if an error occurs
       console.error('Error:', error);
       alert('Failed to generate floor plan');
     }
@@ -56,7 +52,13 @@ const CreatePage = () => {
           <form className="form" onSubmit={handleSubmit}>
             <div className="input-group">
               <label htmlFor="house_type" className="Housetype-title">Select House Type *</label>
-              <select name="house_type" className="Housetype-select" value={formData.house_type} onChange={handleChange} required>
+              <select
+                name="house_type"
+                className="Housetype-select"
+                value={formData.house_type}
+                onChange={handleChange}
+                required
+              >
                 <option value="">Select</option>
                 <option value="Studio">Studio</option>
                 <option value="Villa">Villa</option>
@@ -70,7 +72,6 @@ const CreatePage = () => {
                   <tr>
                     <th>Room</th>
                     <th>Dimension</th>
-
                   </tr>
                 </thead>
                 <tbody>
